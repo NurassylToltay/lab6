@@ -22,11 +22,11 @@ console.log(productofthree);
 //Second problem (#14) - declaration
 function greatest (number1, number2, number3) {
 
-	if (number1 > number2 && number1 > number3) {
+	if ((number1 > number2 && number1 > number3)||(number1 == number2 && number1 > number3)||(number1 == number3 && number1 > number2)) {
 		return number1
 	}
 
-	else if (number2 > number1 && number2 > number3) {
+	else if ((number2 > number1 && number2 > number3)||(number1 == number2 && number2 > number3)||(number2 == number3 && number2 > number1)) {
 		return number2
 	}
 
@@ -36,8 +36,8 @@ function greatest (number1, number2, number3) {
 
 
 //Second problem - invocation
-let e = 24.7;
-let f = 247;
+let e = 247;
+let f = 24.7;
 let g = 24/7;
 let h = greatest (e, f, g); 
 
